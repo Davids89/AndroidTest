@@ -8,12 +8,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitHelper {
+
+    private static Retrofit.Builder INSTANCE;
     private final static String API_URL = "http://gateway.marvel.com/v1/public/";
 
-    private Retrofit.Builder INSTANCE = new Retrofit.Builder().baseUrl(API_URL)
-            .addConverterFactory(GsonConverterFactory.create());
+    public RetrofitHelper() {
+        INSTANCE = new Retrofit.Builder().baseUrl(API_URL)
+                .addConverterFactory(GsonConverterFactory.create());
+    }
 
-    public Retrofit.Builder getInstance(){
-        return this.INSTANCE;
+    public static Retrofit.Builder getInstance(){
+        return INSTANCE;
     }
 }
