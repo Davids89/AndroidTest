@@ -5,4 +5,7 @@ package com.redbooth.comics.ComicsList;
  */
 
 public interface ComicsListPresenter {
+    void onCreate();
+    void onDestroy();
+    void onEventMainThread(ComicsEvent event);
 }

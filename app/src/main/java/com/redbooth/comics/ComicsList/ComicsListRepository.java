@@ -5,4 +5,7 @@ package com.redbooth.comics.ComicsList;
  */
 
 public interface ComicsListRepository {
+    void createKeysMap();
+
+    void marvelUpdating();
 }
