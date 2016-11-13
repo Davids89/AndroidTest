@@ -1,4 +1,6 @@
-package com.redbooth.comics;
+package com.redbooth.comics.api_interfaces;
+
+import com.redbooth.comics.entities.Marvel;
 
 import java.util.Map;
 
@@ -7,7 +9,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.QueryMap;
 
-public interface Server {
+public interface character_api {
 
     /**
      * Get all the comics from a specific character.

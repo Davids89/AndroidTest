@@ -1,4 +1,4 @@
-package com.redbooth.comics;
+package com.redbooth.comics.ComicsList.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.redbooth.comics.ComicViewHolder;
 import com.squareup.picasso.Picasso;
 
 import com.redbooth.comics.Marvel.Data.Comic;
@@ -49,7 +50,7 @@ class ComicAdapter extends RecyclerView.Adapter<ComicViewHolder> {
         return count;
     }
 
-    public void setC(List<Marvel.Data.Comic> comics) {
+    public void setC(List<Comic> comics) {
         this.comics = comics;
     }
 }

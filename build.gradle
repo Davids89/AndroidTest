@@ -21,3 +21,18 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    eventbus = '3.0.0'
+    espresso = '2.2.2'
+    appcompat = '24.2.1'
+    junit = '4.12'
+    retrofit = '2.1.0'
+    retrofit_gson = '2.1.0'
+    glassfish = '10.0-b28'
+    gson = '2.7'
+    recyclerView = '24.2.1'
+    picasso = '2.5.2'
+    androidSupport = '24.2.1'
+    butterknife = '7.0.1'
+}

@@ -1,8 +1,12 @@
-package com.redbooth.comics;
+package com.redbooth.comics.ComicsList;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+
+import com.redbooth.comics.ComicAdapter;
+import com.redbooth.comics.Marvel;
+import com.redbooth.comics.Server;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;
@@ -26,7 +30,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  *
  * 這是應用程序的主要活動。它顯示在主屏幕和AppCompatActivity繼承
  */
-public class MainActivity extends AppCompatActivity
+public class ComicsActivity extends AppCompatActivity
 {
     // Main Activity
     // Principal Activity of this app
@@ -102,7 +106,7 @@ public class MainActivity extends AppCompatActivity
 
     /**
      * Method marvel_updating
-     * Class MainActivity
+     * Class ComicsActivity
      *
      * author Unknown
      * modified by Unknown

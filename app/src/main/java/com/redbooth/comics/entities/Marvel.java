@@ -1,4 +1,4 @@
-package com.redbooth.comics;
+package com.redbooth.comics.entities;
 
 import java.util.ArrayList;
 import java.util.List;
