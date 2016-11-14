@@ -1,9 +1,9 @@
-package com.redbooth.comics;
+package com.redbooth.comics.entities;
 
 import java.util.ArrayList;
 import java.util.List;
 
-class Marvel {
+public class Marvel {
     public Data data;
 
     public static class Data {

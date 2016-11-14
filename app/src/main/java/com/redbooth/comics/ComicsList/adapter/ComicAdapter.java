@@ -1,4 +1,4 @@
-package com.redbooth.comics;
+package com.redbooth.comics.ComicsList.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,17 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.redbooth.comics.entities.Marvel;
 import com.squareup.picasso.Picasso;
 
-import com.redbooth.comics.Marvel.Data.Comic;
 
 import java.util.Collections;
 import java.util.List;
 
-class ComicAdapter extends RecyclerView.Adapter<ComicViewHolder> {
-    private List<Comic> comics;
+public class ComicAdapter extends RecyclerView.Adapter<ComicViewHolder> {
+    private List<Marvel.Data.Comic> comics;
 
-    ComicAdapter() {
+    public ComicAdapter() {
         this.comics = Collections.emptyList();
     }
 
@@ -30,7 +30,7 @@ class ComicAdapter extends RecyclerView.Adapter<ComicViewHolder> {
 
     @Override
     public void onBindViewHolder(ComicViewHolder holder, int position) {
-        final Comic comic = comics.get(position);
+        final Marvel.Data.Comic comic = comics.get(position);
         holder.item = comic;
         holder.title.setText(comic.getTitle());
         Picasso.with(holder.itemView.getContext())

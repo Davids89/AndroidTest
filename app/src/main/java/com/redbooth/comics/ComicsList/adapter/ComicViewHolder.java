@@ -1,16 +1,17 @@
-package com.redbooth.comics;
+package com.redbooth.comics.ComicsList.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.redbooth.comics.Marvel.Data.Comic;
+import com.redbooth.comics.entities.Marvel;
+
 
 class ComicViewHolder extends RecyclerView.ViewHolder {
     ImageView thumbnail;
     TextView title;
-    Comic item;
+    Marvel.Data.Comic item;
 
     ComicViewHolder(View itemView) {
         super(itemView);

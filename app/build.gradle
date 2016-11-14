@@ -21,16 +21,18 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.ext.espresso", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    provided 'org.glassfish:javax.annotation:10.0-b28'
-    compile 'com.google.code.gson:gson:2.7'
-    compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.android.support:design:24.2.1'
+    compile "com.android.support:appcompat-v7:$rootProject.ext.appcompat"
+    testCompile "junit:junit:$rootProject.ext.junit"
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit_gson"
+    provided "org.glassfish:javax.annotation:$rootProject.ext.glassfish"
+    compile "com.google.code.gson:gson:$rootProject.ext.gson"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.recyclerView"
+    compile "com.squareup.picasso:picasso:$rootProject.ext.picasso"
+    compile "com.android.support:design:$rootProject.ext.androidSupport"
+    compile "org.greenrobot:eventbus:$rootProject.ext.eventbus"
+    compile "com.jakewharton:butterknife:$rootProject.ext.butterknife"
 }
