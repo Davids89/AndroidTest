@@ -1,5 +1,7 @@
 package com.redbooth.comics.ComicsList;
 
+import android.util.Log;
+
 import com.redbooth.comics.api_interfaces.character_api;
 import com.redbooth.comics.domain.RetrofitHelper;
 import com.redbooth.comics.entities.Marvel;
@@ -40,8 +42,8 @@ public class ComicsListRepositoryImpl implements ComicsListRepository {
     @Override
     public void createKeysMap() {
         String timestamp = "ts"; // replace here with correct values
-        String privateKey = "private_key"; // replace here with correct values
-        String publicKey = "public_key"; // replace here with correct values
+        String privateKey = "769ff0018456c6510ae2160be149b8771aab78f5"; // replace here with correct values
+        String publicKey = "99c78a57d7a5dbf70bf2f8f796b9911e"; // replace here with correct values
         String hash = "";
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -71,13 +73,13 @@ public class ComicsListRepositoryImpl implements ComicsListRepository {
         // enqueue amazingcomics call
         character_call.enqueue(new Callback<Marvel>() {
             @Override
-            public void onResponse(Call<Marvel> c, Response<Marvel> r) {
+            public void onResponse(Call<Marvel> call, Response<Marvel> response) {
                 // Everything is ok
-                if (r.code() == 200) {
+                if (response.code() == 200) {
 
                     ComicsEvent event = new ComicsEvent();
 
-                    event.setComics(r.body().data.results);
+                    event.setComics(response.body().data.results);
 
                     eventBus.post(event);
                 }
